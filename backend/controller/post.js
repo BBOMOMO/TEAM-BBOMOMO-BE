@@ -1,13 +1,9 @@
-const { Post, User, StudyTime, Comment, sequelize } = require("../models");
-const Sequelize = require("sequelize");
-const { Op } = Sequelize;
-
-//비속어필터
+const { Post, User, Comment } = require("../models");
 
 // post posts
 async function postArticle(req, res) {
   try {
-    const { nick, userId } = res.locals.user;
+    const { userId } = res.locals.user;
     const { bgtype, postContent, studyTime } = req.body;
     if (!req.file) {
       // file이 아니고 bgtype 일 때

@@ -1,4 +1,3 @@
-const express = require("express");
 const router = require("express").Router();
 const postCtl = require("../controller/post");
 const commentCtl = require("../controller/comment");

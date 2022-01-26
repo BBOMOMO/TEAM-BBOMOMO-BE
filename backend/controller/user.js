@@ -9,7 +9,6 @@ function timeSet() {
   const nowDay = now.getDay();
   const dayToMs = 24 * 60 * 60 * 1000;
 
-  console.log(now);
   // 2. 금주 월요일과 어제의 timestamp 출력.
   const [mondayStamp, yesterdayStamp] = [
     nowTimestamp - nowDay * dayToMs,
@@ -151,50 +150,3 @@ module.exports = {
   updateUserImg,
   showRanking,
 };
-
-// const { userId } = res.locals.user;
-// let today = new Date();
-// const timestamp = today.getTime();
-
-// // 어제와 내일의 timestamp를 출력합니다.
-// const [yesterday, tomorrow] = [
-//   timestamp - 24 * 60 * 60 * 1000,
-//   timestamp + 24 * 60 * 60 * 1000,
-// ];
-// // 년, 월, 어제 날짜, 오늘 날짜, 내일 날짜를 출력합니다.
-// const [year, month, dayBefore, todayDate, dayAfter] = [
-//   today.getFullYear(),
-//   `0${today.getMonth() + 1}`.slice(-2),
-//   `0${new Date(yesterday).getDate()}`.slice(-2),
-//   `0${today.getDate()}`.slice(-2),
-//   `0${new Date(tomorrow).getDate()}`.slice(-2),
-// ];
-
-// // 현재시각이 09시 이전인 경우 어제 09시 부터 오늘 09시까지의 데이터 출력
-// // 현재시각이 09시 이후인 경우 오늘 09시 부터 내일 09시까지의 데이터 출력
-// let isNewDay = today.getHours();
-// isNewDay < 9
-//   ? (todayStart = `${year}-${month}-${dayBefore}T00:00:00.000Z`)
-//   : (todayStart = `${year}-${month}-${todayDate}T00:00:00.000Z`);
-// isNewDay < 9
-//   ? (todayEnd = `${year}-${month}-${todayDate}T00:00:00.000Z`)
-//   : (todayEnd = `${year}-${month}-${dayAfter}T00:00:00.000Z`);
-
-// console.log(todayStart);
-// console.log(todayEnd);
-
-// const today = new Date();
-// const timestamp = today.getTime();
-// const day = today.getDay();
-
-// // 금주 월요일의 timestamp를 출력합니다.
-// const [startPoint] = [timestamp - (day - 1) * 24 * 60 * 60 * 1000];
-
-// // 년, 월, 월요일 날짜를 출력합니다.
-// const [year, month, monday] = [
-//   today.getFullYear(),
-//   `0${today.getMonth() + 1}`.slice(-2),
-//   `0${new Date(startPoint).getDate()}`.slice(-2),
-// ];
-
-// const weekStart = `${year}-${month}-${monday}T00:00:01.000Z`;

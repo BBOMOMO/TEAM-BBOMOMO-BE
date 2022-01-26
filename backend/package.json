@@ -1,8 +1,8 @@
 {
-  "name": "backend",
+  "name": "bbomomo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "webRTC와 socketIO를 활용한 뽀모도로 타이머 기반 화상스터디 플랫폼",
+  "main": "server.js",
   "scripts": {
     "prettify": "prettier --write *.js **/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,22 +15,20 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
-    "express-rate-limit": "^6.1.0",
     "express-validator": "^6.14.0",
     "jsonwebtoken": "^8.5.1",
     "multer": "^1.4.4",
     "multer-s3": "^2.10.0",
     "mysql2": "^2.3.3",
-    "nodemon": "^2.0.15",
     "passport": "^0.5.2",
     "passport-google-oauth20": "^2.0.0",
     "passport-kakao": "^1.0.1",
     "sequelize": "^6.13.0",
-    "socket.io": "^4.4.0",
-    "uuid": "^8.3.2"
+    "socket.io": "^4.4.0"
   },
   "devDependencies": {
     "prettier": "^2.5.1",
-    "sequelize-cli": "^6.3.0"
+    "sequelize-cli": "^6.3.0",
+    "nodemon": "^2.0.15"
   }
 }

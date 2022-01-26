@@ -1,4 +1,4 @@
-const { Room, User, PersonInRoom } = require("../models");
+const { Room, PersonInRoom } = require("../models");
 const { Sequelize } = require("sequelize");
 
 async function allRoomList(req, res) {
@@ -171,36 +171,6 @@ async function enterRoom(req, res) {
       msg: "공개방 입장에 실패하였습니다.",
     });
   }
-
-  // 비공개방 입장시 필요
-  // switch (parseInt(existRoom.private)) {
-  //   case 0:
-  //     // 공개방 입장
-  //     try {
-  //       await PersonInRoom.create({ userId, roomId, nick });
-  //       return res.status(201).send({ msg: "입장 완료", room: existRoom });
-  //     } catch (err) {
-  //       return res.status(400).send({
-  //         msg: "공개방 입장에 실패하였습니다.",
-  //       });
-  //     }
-  //   case 1:
-  //     // 비공개방 입장
-  //     if (existRoom.roomPassword != roomPassword) {
-  //       return res.status(400).send({
-  //         msg: "비밀번호를 확인해주세요.",
-  //       });
-  //     } else {
-  //       try {
-  //         await PersonInRoom.create({ userId, roomId, nick: user.nick });
-  //         return res.status(201).send({ msg: "입장 완료", room: existRoom });
-  //       } catch (err) {
-  //         return res.status(400).send({
-  //           msg: "비공개방 입장에 실패하였습니다.",
-  //         });
-  //       }
-  //     }
-  // }
 }
 
 async function exitRoom(req, res) {

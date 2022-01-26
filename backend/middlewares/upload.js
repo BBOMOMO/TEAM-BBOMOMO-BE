@@ -2,7 +2,6 @@ const path = require("path");
 const multerS3 = require("multer-s3");
 const multer = require("multer");
 const AWS = require("aws-sdk");
-require("dotenv").config();
 
 // AWS S3 사용하기 위한 config
 AWS.config.update({

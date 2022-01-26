@@ -2,17 +2,20 @@ const app = require("./app");
 const fs = require("fs");
 const sequelize = require("sequelize");
 const { Op } = sequelize;
+
 // const options = {
-//   // letsencrypt로 받은 인증서 경로를 입력
-//   ca: fs.readFileSync("/etc/letsencrypt/live/hanghaelog.shop/fullchain.pem"),
-//   key: fs.readFileSync("/etc/letsencrypt/live/hanghaelog.shop/privkey.pem"),
-//   cert: fs.readFileSync("/etc/letsencrypt/live/hanghaelog.shop/cert.pem"),
+//   letsencrypt로 받은 인증서 경로를 입력
 // };
+
 const server = require("http").createServer(app);
+
+// https 실제 배포 시 연결
 // const https = require("https").createServer(options, app);
 
 const { Room, PersonInRoom, StudyTime } = require("./models");
 
+// https 설정 시
+// const io = require("socket.io")(https, {
 const io = require("socket.io")(server, {
   cors: {
     origin: "*",
@@ -27,7 +30,6 @@ io.on("connection", (socket) => {
   let nickname;
   let streamID;
   let statusMsg;
-  console.log("클라이언트 : ", socket.id, "님");
 
   socket.on(
     "join-room",
@@ -40,7 +42,6 @@ io.on("connection", (socket) => {
       nickname = nick;
       try {
         socket.join(roomID);
-        console.log(roomID, "방에 입장");
         socket
           .to(roomID)
           .emit("user-connected", peerID, nickname, streamID, statusMsg);
@@ -68,7 +69,7 @@ io.on("connection", (socket) => {
   socket.on("peer", (nick) => {
     socket.emit("peer", nick);
   });
-  
+
   socket.on("endRest", async (currentRound) => {
     const room = await Room.findByPk(roomID);
     const openAt = Date.now() + room.studyTime * 60 * 1000;
@@ -118,8 +119,6 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnecting", async () => {
-    console.log(`${userID}님이 ${roomID}번방에서 나가셨습니다!`);
-
     await PersonInRoom.destroy({
       where: {
         userId: userID,
@@ -147,28 +146,8 @@ io.on("connection", (socket) => {
   socket.on("join-chatRoom", (roomId, userId, userNickname) => {
     socket.join(roomId);
   });
-
-  // socket.on("offer", (offer, peerId, roomId) => {
-  //   console.log("offer 왔습니다!");
-  //   socket.to(roomId).emit("offer", offer, peerId);
-  // });
-
-  // socket.on("answer", (answer, peerId, roomId) => {
-  //   console.log("answer 왔습니다!");
-  //   socket.to(roomId).emit("answer", answer, peerId);
-  // });
-
-  // socket.on("ice", (ice, peerId, roomId) => {
-  //   console.log("ice 왔습니다!");
-  //   socket.to(roomId).emit("ice", ice, peerId);
-  // });
 });
 
+// https 연결 시
 // module.exports = { server, https };
 module.exports = { server };
-
-// const url = process.env.REACT_APP_API_URL;
-// const socket = io.connect(url, { transports: ["websocket"] });
-
-// const url = process.env.REACT_APP_API_URL;
-// const socket = io(url, { transports: ["websocket"] });
