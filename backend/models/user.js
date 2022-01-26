@@ -10,14 +10,23 @@ module.exports = class User extends Sequelize.Model {
           autoIncrement: true,
           type: Sequelize.INTEGER,
         },
+        snsId: {
+          type: Sequelize.STRING,
+          unique: true,
+          allowNull: true,
+        },
+        provider: {
+          type: Sequelize.STRING,
+          allowNull: true,
+        },
         username: {
           type: Sequelize.STRING,
-          allowNull: false,
+          allowNull: true,
           unique: true,
         },
         password: {
           type: Sequelize.STRING,
-          allowNull: false,
+          allowNull: true,
         },
         nick: {
           type: Sequelize.STRING,
@@ -29,8 +38,9 @@ module.exports = class User extends Sequelize.Model {
           allowNull: true,
         },
         category: {
-          type: Sequelize.STRING,
-          allowNull: false,
+          type: Sequelize.INTEGER,
+          allowNull: true,
+          defaultValue: 0,
         },
         statusMsg: {
           type: Sequelize.STRING,
@@ -42,7 +52,7 @@ module.exports = class User extends Sequelize.Model {
         timestamps: true,
         underscored: false,
         modelName: "User",
-        tableName: "users",
+        tableName: "Users",
         paranoid: false,
         charset: "utf8mb4",
         collate: "utf8mb4_general_ci",
