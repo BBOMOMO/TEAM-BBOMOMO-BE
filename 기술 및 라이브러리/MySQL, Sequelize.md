@@ -1,8 +1,6 @@
 ## 🐬 MySQL과 Sequelize
-
 ---
 <br>
-
 #### 1. MySQL이란
 
      대표적인 관계형 데이터베이스. Structured Query Language를 사용해 데이터를 추가하고, 읽고, 수정하고, 삭제할 수 있습니다.
