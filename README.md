@@ -42,6 +42,37 @@
 |      bcrypt       |         비밀번호 해쉬화          |  5.0.1   |
 |     passport      |         소셜 로그인 구현         |  0.5.2   |
 
+
+
+<br>
+
+<h1>
+<details>
+<summary>서비스 아키텍쳐</summary>
+<div markdown="1">
+
+![아키텍쳐](https://user-images.githubusercontent.com/87928719/151095738-1be7f0ef-5fc9-41b2-9b7d-dad6d0bad81a.png)
+
+</div>
+</details>
+</h1>
+
+<br>
+
+<h1>
+<details>
+<summary>API 명세서</summary>
+<div markdown="1">
+
+![auth](https://user-images.githubusercontent.com/87928719/151182062-10082d50-771c-4835-992a-be3f1c5d034e.PNG)
+![users](https://user-images.githubusercontent.com/87928719/151182046-13c8f50a-da55-4e85-b68f-e0ee2ed242d6.png)
+![studyRoom](https://user-images.githubusercontent.com/87928719/151182076-8896433d-2e7e-45e1-9c45-24e4ca46761d.png)
+![post](https://user-images.githubusercontent.com/87928719/151182093-e3c120e9-cc38-4eb6-a706-4068b04534fb.png)
+
+</div>
+</details>
+</h1>
+
 <br>
 
 # ![Group 3477](https://user-images.githubusercontent.com/63698668/151095490-9e2b3688-9f9f-4e93-9165-97b8423fef78.png) 트러블 슈팅, 느낀점
