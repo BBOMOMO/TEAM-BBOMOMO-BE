@@ -60,4 +60,5 @@
 - 소켓 연결 실패 시 fallback을 통해 다른 방식으로 스스로 해당 클라이언트와 연결을 시도함
 - room, namespace 개념을 이용해 일부 클라이언트에게만 데이터를 전송하는 브로드캐스팅이 가능함
 
+## 출처
 [프로토콜(Protocol) 이란 / TCP/IP, HTTP, Web Socket](https://itstart-190126.tistory.com/75)
