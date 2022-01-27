@@ -43,3 +43,9 @@ P2P 방식의 경우는 서버를 거치지 않는 방식이기에 모니터링�
 ![as-basic-diagram](https://user-images.githubusercontent.com/87928719/151394958-33c59c56-5913-4a9c-b8bf-2597da7d9003.png)
 
 [이미지 출처](https://docs.aws.amazon.com/ko_kr/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html)
+
+## Scale-out 시 문제점
+Scale-out된 여러대의 서버는 서로 독립적으로 가동되고 있기 때문에 각기 다른 서버로 접속한 참여자들 사이에서는 미디어 전송이 이루어질 수 없음
+따라서 미디어 서버끼리 서로 연결될 수 있도록 구현해야함
+
+[자료 출처](https://post.naver.com/viewer/postView.naver?volumeNo=29387570&memberNo=50640104)
