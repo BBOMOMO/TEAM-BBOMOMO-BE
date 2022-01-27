@@ -2,16 +2,13 @@
 
 라이브러리가 없다면...
 
-경우마다 계속 작성하여 처리하여야됨
 ```jsx
 app.post('/user', (req, res, next)=>{
 if(req.body.email..) {
  //정규표현식이나 유효성검사
 	res.status(400).send({msg: 틀린 이메일입니다})
-}else if(){
-...
-}else if(){
-...
+else if()...
+
 }
 res.sendStatus(201);
 });
