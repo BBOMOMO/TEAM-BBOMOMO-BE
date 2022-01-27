@@ -8,7 +8,10 @@ app.post('/user', (req, res, next)=>{
 if(req.body.email..) {
  //정규표현식이나 유효성검사
 	res.status(400).send({msg: 틀린 이메일입니다})
-else if()...
+}else if(){
+...
+}else if(){
+...
 }
 res.sendStatus(201);
 });
