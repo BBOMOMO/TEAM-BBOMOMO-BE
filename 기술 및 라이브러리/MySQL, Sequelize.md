@@ -1,6 +1,5 @@
 ## 🐬 MySQL과 Sequelize
 ---
-<br>
 
 #### 1. MySQL이란
 
