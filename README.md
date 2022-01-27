@@ -51,7 +51,9 @@
 <summary>서비스 아키텍쳐</summary>
 <div markdown="1">
 
-![아키텍쳐](https://user-images.githubusercontent.com/85975904/151278794-c81d778e-31d5-4b89-af24-7a44b4b322d2.png)
+
+![뽀모모아키텍쳐v2](https://user-images.githubusercontent.com/85975904/151278794-c81d778e-31d5-4b89-af24-7a44b4b322d2.png)
+
 
 </div>
 </details>
