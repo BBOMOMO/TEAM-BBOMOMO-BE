@@ -40,7 +40,7 @@ app.post(
 {
   msg: [
     {
-      msg: "Invalid value",
+      msg: "Invalid value"
     },
   ];
 }
@@ -54,16 +54,8 @@ body("nick")
   .withMessage("두글자 이상");
 ```
 
-//trim()을 사용하여 공백제거하기 -> 하지않으면 공백값도 포함됨
+//trim()을 사용하여 공백제거하기
 
-````
-
-순서에 따라 통과할수도
-
-```jsx
-body("nick").trim().isLength({ min: 2 }).withMessage("두글자 이상");
-body("nick").isLength({ min: 2 }).trim().withMessage("두글자 이상");
-````
 
 프로젝트에서는 미들웨어로 사용했다
 
