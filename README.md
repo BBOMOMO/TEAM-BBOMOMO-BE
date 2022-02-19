@@ -1,6 +1,7 @@
-# ![Group 3474](https://user-images.githubusercontent.com/63698668/151095484-0d54cb7c-b35a-4f4f-947a-ce50e45489fa.png) 서비스 설명 리드미 보러가기
+# ![Group 3474](https://user-images.githubusercontent.com/63698668/151095484-0d54cb7c-b35a-4f4f-947a-ce50e45489fa.png) 서비스 설명
 
 [메인 ReadMe.md](https://github.com/BBOMOMO) 를 먼저 참고 해주세요
+[서비스 소개 영상](https://www.youtube.com/watch?v=y3itBLnabnk&t=3s)
 
 <br>
 
